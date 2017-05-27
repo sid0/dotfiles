@@ -51,8 +51,8 @@ kwmc config float-non-resizable on
 # Automatically resize the window to its container
 kwmc config lock-to-container on
 
-# Set focus-follows-mouse-mode to autoraise (sid0: disabled)
-kwmc config focus-follows-mouse off
+# Set focus-follows-mouse-mode to autoraise (sid0: may have modified this)
+kwmc config focus-follows-mouse on
 
 /*
     Focus-follows-mouse is temporarily disabled when
@@ -65,9 +65,9 @@ kwmc config center-on-float on
 
 /*
     The mouse will automatically move to the center
-    of the focused window (sid0: disabled)
+    of the focused window (sid0: may have modified this)
 */
-# kwmc config mouse-follows-focus on
+kwmc config mouse-follows-focus on
 
 
 /*

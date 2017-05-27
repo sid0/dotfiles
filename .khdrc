@@ -1,7 +1,7 @@
 khd kwm on
 
 # Quick reloading
-ctrl + alt + shift - r : kwmc config reload
+ctrl + alt + shift - z : kwmc config reload
 
 # Focus other windows
 #alt + shift - j : kwmc window -f prev
@@ -31,8 +31,23 @@ alt + shift - t : kwmc window -t focused
 alt + shift + ctrl - t : kwmc window -t next
 
 
+## Marking
+alt + shift - space : kwmc window -mk focused
+alt + shift + ctrl - space : kwmc window -s mark
+
+
 ## Space management
 
 # Switch between spaces without transitions
 ctrl - left : kwmc space -fExperimental left
 ctrl - right : kwmc space -fExperimental right
+
+# Switch quickly to first three screens
+alt + shift - w : kwmc space -fExperimental 1
+alt + shift - e : kwmc space -fExperimental 2 
+alt + shift - r : kwmc space -fExperimental 3
+
+# Move windows to first three screens
+alt + shift + ctrl - w : kwmc window -m space 1
+alt + shift + ctrl - e : kwmc window -m space 2
+alt + shift + ctrl - r : kwmc window -m space 3
