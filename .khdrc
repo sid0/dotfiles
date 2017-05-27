@@ -1,0 +1,31 @@
+khd kwm on
+
+# Quick reloading
+ctrl + alt + shift - r : kwmc config reload
+
+# Focus other windows
+#alt + shift - j : kwmc window -f prev
+#alt + shift - k : kwmc window -f next
+
+# Expand and shrink
+alt + shift - h : kwmc window -c expand 0.05 west 
+alt + shift - l : kwmc window -c expand 0.05 east
+alt + shift - j : kwmc window -c expand 0.05 south
+alt + shift - k : kwmc window -c expand 0.05 north
+
+alt + shift + ctrl - h : kwmc window -c reduce 0.05 west
+alt + shift + ctrl - l : kwmc window -c reduce 0.05 east
+alt + shift + ctrl - j : kwmc window -c reduce 0.05 south
+alt + shift + ctrl - k : kwmc window -c reduce 0.05 north
+
+# Focus window
+alt + shift - up : kwmc window -f prev
+alt + shift - down : kwmc window -f next
+
+# Move windows around
+alt + shift + ctrl - up : kwmc window -s prev
+alt + shift + ctrl - down : kwmc window -s next
+
+# Toggle floating
+alt + shift - t : kwmc window -t focused
+alt + shift + ctrl - t : kwmc window -t next
