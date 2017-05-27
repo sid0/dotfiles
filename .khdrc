@@ -29,3 +29,10 @@ alt + shift + ctrl - down : kwmc window -s next
 # Toggle floating
 alt + shift - t : kwmc window -t focused
 alt + shift + ctrl - t : kwmc window -t next
+
+
+## Space management
+
+# Switch between spaces without transitions
+ctrl - left : kwmc space -fExperimental left
+ctrl - right : kwmc space -fExperimental right
