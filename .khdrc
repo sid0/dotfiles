@@ -24,13 +24,13 @@ alt + shift + ctrl - l : kwmc window -c reduce 0.05 east
 alt + shift + ctrl - j : kwmc window -c reduce 0.05 south
 alt + shift + ctrl - k : kwmc window -c reduce 0.05 north
 
-# Focus window
-alt + shift - up : kwmc window -f prev
-alt + shift - down : kwmc window -f next
+# Focus window ([ = 0x21, ] = 0x1e)
+alt + shift - 0x21 : kwmc window -f prev
+alt + shift - 0x1e : kwmc window -f next
 
 # Move windows around
-alt + shift + ctrl - up : kwmc window -s prev
-alt + shift + ctrl - down : kwmc window -s next
+alt + shift + ctrl - 0x21 : kwmc window -s prev
+alt + shift + ctrl - 0x1e : kwmc window -s next
 
 # Toggle floating
 alt + shift - t : kwmc window -t focused
