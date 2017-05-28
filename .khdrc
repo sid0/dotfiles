@@ -35,7 +35,6 @@ alt + shift + ctrl - t : kwmc window -t next
 alt + shift - space : kwmc window -mk focused
 alt + shift + ctrl - space : kwmc window -s mark
 
-
 # Tree management (, = 0x2b, . = 0x2f)
 alt + shift + ctrl - 0x2b : kwmc tree -pseudo create
 alt + shift + ctrl - 0x2f : kwmc tree -pseudo destroy
@@ -55,3 +54,18 @@ alt + shift - r : kwmc space -fExperimental 3
 alt + shift + ctrl - w : kwmc window -m space 1
 alt + shift + ctrl - e : kwmc window -m space 2
 alt + shift + ctrl - r : kwmc window -m space 3
+
+## Scratchpad
+
+alt + shift - z : kwmc scratchpad add
+alt + shift - x : kwmc scratchpad remove
+alt + shift - 1 : kwmc scratchpad toggle 0
+alt + shift - 2 : kwmc scratchpad toggle 1
+alt + shift - 3 : kwmc scratchpad toggle 2
+alt + shift - 4 : kwmc scratchpad toggle 3
+alt + shift - 5 : kwmc scratchpad toggle 4
+alt + shift - 6 : kwmc scratchpad toggle 5
+alt + shift - 7 : kwmc scratchpad toggle 6
+alt + shift - 8 : kwmc scratchpad toggle 7
+alt + shift - 9 : kwmc scratchpad toggle 8
+alt + shift - 0 : kwmc scratchpad toggle 9
