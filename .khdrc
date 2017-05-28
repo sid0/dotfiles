@@ -1,3 +1,9 @@
+# The general philosophy behind these bindings is to hide everything behind two
+# modifiers that are otherwise rarely used on macOS: alt + shift and alt +
+# shift + ctrl. At a high level, alt + shift bindings are for movement and alt
+# + shift + ctrl bindings are for control. (There are plenty of exceptions to
+# these rules.)
+
 khd kwm on
 
 # Quick reloading
