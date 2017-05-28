@@ -80,7 +80,7 @@ kwmc config mouse-follows-focus on
 kwmc config mouse-drag on
 
 # The modifier keys to be held down to initiate mouse-drag
-kwmc config mouse-drag mod shift+ctrl
+kwmc config mouse-drag mod shift+ctrl+alt
 
 # Allow window focus to wrap-around
 kwmc config cycle-focus all
@@ -102,8 +102,8 @@ Override default settings for screen 1
 # Set default container split-ratio
 kwmc config split-ratio 0.618
 
-# New splits become the left leaf-node
-kwmc config spawn left
+# New splits become the left leaf-node (sid0: may have modified this)
+kwmc config spawn right
 
 /*
     Add custom tiling rules for applications that

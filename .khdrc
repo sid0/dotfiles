@@ -36,6 +36,10 @@ alt + shift - space : kwmc window -mk focused
 alt + shift + ctrl - space : kwmc window -s mark
 
 
+# Tree management (, = 0x2b, . = 0x2f)
+alt + shift + ctrl - 0x2b : kwmc tree -pseudo create
+alt + shift + ctrl - 0x2f : kwmc tree -pseudo destroy
+
 ## Space management
 
 # Switch between spaces without transitions
