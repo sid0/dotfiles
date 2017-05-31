@@ -53,7 +53,8 @@ eval "$(rbenv init -)"
 
 function _sourcebk() {
 	# grab the backup version of the script from within the dotfiles directory
-	local bk="${0:A:h}/bk/${1:t}"
+	local zshrc_loc="$(readlink ~/.zshrc)"
+	local bk="${zshrc_loc:h:h}/bk/${1:t}"
 	if [[ -f "$1" ]]; then
 		source "$1"
 	elif [[ -f "$bk" ]]; then
