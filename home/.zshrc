@@ -5,7 +5,9 @@ promptinit
 
 setopt histignorealldups sharehistory
 
-. /usr/share/scm/scm-prompt.sh
+[[ -f /usr/share/scm/scm-prompt.sh ]] && source /usr/share/scm/scm-prompt.sh
+[[ -f /opt/facebook/hg/share/scm-prompt.sh ]] && source /opt/facebook/hg/share/scm-prompt.sh
+
 setopt PROMPT_SUBST
 export PS1='%K{green}%n@%2m%k %B%F{cyan}%(4~|...|)%3~ %f%b{%F{yellow}%T%f} [%F{yellow}%?%f]
 %F{green}$(_dotfiles_scm_info)%F{white}%# %b%f%k'
