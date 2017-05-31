@@ -2,10 +2,13 @@
 
 autoload -Uz promptinit
 promptinit
-prompt adam1
 
 setopt histignorealldups sharehistory
 
+. /usr/share/scm/scm-prompt.sh
+setopt PROMPT_SUBST
+export PS1='%K{green}%n@%2m%k %B%F{cyan}%(4~|...|)%3~ %f%b{%F{yellow}%T%f} [%F{yellow}%?%f]
+%F{green}$(_dotfiles_scm_info)%F{white}%# %b%f%k'
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
