@@ -54,7 +54,7 @@ eval "$(rbenv init -)"
 function _sourcebk() {
 	# grab the backup version of the script from within the dotfiles directory
 	local zshrc_loc="$(readlink ~/.zshrc)"
-	local bk="${zshrc_loc:h:h}/bk/${1:t}"
+	local bk="${zshrc_loc:h:h}/bk/$2"
 	if [[ -f "$1" ]]; then
 		source "$1"
 	elif [[ -f "$bk" ]]; then
@@ -62,9 +62,9 @@ function _sourcebk() {
 	fi
 }
 
-_sourcebk ~/.iterm2_shell_integration.zsh
-_sourcebk /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-_sourcebk /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+_sourcebk ~/.iterm2_shell_integration.zsh .iterm2_shell_integration.zsh
+_sourcebk /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+_sourcebk /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh zsh-history-substring-search.zsh
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
