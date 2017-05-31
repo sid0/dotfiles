@@ -72,3 +72,6 @@ _sourcebk /usr/local/share/zsh-history-substring-search/zsh-history-substring-se
 # history up and down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+# local overrides (MUST BE AT THE END)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
