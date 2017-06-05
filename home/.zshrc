@@ -3,7 +3,7 @@
 autoload -Uz promptinit
 promptinit
 
-setopt histignorealldups sharehistory
+setopt histignorealldups sharehistory chasedots autopushd
 
 [[ -f /usr/share/scm/scm-prompt.sh ]] && source /usr/share/scm/scm-prompt.sh
 [[ -f /opt/facebook/hg/share/scm-prompt.sh ]] && source /opt/facebook/hg/share/scm-prompt.sh
