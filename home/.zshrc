@@ -5,6 +5,9 @@ promptinit
 
 setopt histignorealldups sharehistory chasedots autopushd
 
+# Define a default dotfiles info in case the below files aren't available.
+function _dotfiles_scm_info {}
+
 [[ -f /usr/share/scm/scm-prompt.sh ]] && source /usr/share/scm/scm-prompt.sh
 [[ -f /opt/facebook/hg/share/scm-prompt.sh ]] && source /opt/facebook/hg/share/scm-prompt.sh
 
@@ -77,6 +80,8 @@ _sourcebk /usr/local/share/zsh-history-substring-search/zsh-history-substring-se
 # history up and down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
 # local overrides (MUST BE AT THE END)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
