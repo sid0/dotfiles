@@ -5,6 +5,7 @@ promptinit
 
 setopt histignorealldups sharehistory chasedots autopushd
 
+[[ -f /usr/facebook/ops/rc/master.zshrc ]] && source /usr/facebook/ops/rc/master.zshrc
 [[ -f /usr/share/scm/scm-prompt.sh ]] && source /usr/share/scm/scm-prompt.sh
 [[ -f /opt/facebook/hg/share/scm-prompt.sh ]] && source /opt/facebook/hg/share/scm-prompt.sh
 
@@ -77,6 +78,8 @@ _sourcebk /usr/local/share/zsh-history-substring-search/zsh-history-substring-se
 # history up and down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+export PATH=$HOME/.cargo/bin:$PATH
 
 # local overrides (MUST BE AT THE END)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
