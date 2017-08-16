@@ -85,7 +85,7 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 export PATH=$HOME/.cargo/bin:$PATH
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+[ -f ~/.homesick/repos/homeshick/homeshick.sh ] && source ~/.homesick/repos/homeshick/homeshick.sh
 
 # local overrides (MUST BE AT THE END)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
