@@ -56,9 +56,13 @@ alt + shift + ctrl - 0x2f : kwmc tree -pseudo destroy
 #alt + shift - r : kwmc space -fExperimental 3
 
 # Move windows to first three screens
-alt + shift + ctrl - w : chunkc tiling::window --send-to-desktop 1
-alt + shift + ctrl - e : chunkc tiling::window --send-to-desktop 2
-alt + shift + ctrl - r : chunkc tiling::window --send-to-desktop 3
+# (sid0: functionality moved to totalspaces)
+#alt + shift + ctrl - w : chunkc tiling::window --send-to-desktop 1
+#alt + shift + ctrl - e : chunkc tiling::window --send-to-desktop 2
+#alt + shift + ctrl - r : chunkc tiling::window --send-to-desktop 3
+
+# Quick restart
+alt + shift + ctrl - r : launchctl stop homebrew.mxcl.chunkwm
 
 ## Scratchpad
 # (sid0: not implemented in chunkwm)
