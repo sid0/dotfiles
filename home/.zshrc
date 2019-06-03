@@ -84,7 +84,7 @@ _sourcebk /usr/local/share/zsh-history-substring-search/zsh-history-substring-se
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.cargo/bin:$HOME/.cabal/bin:$PATH
 [ -f ~/.homesick/repos/homeshick/homeshick.sh ] && source ~/.homesick/repos/homeshick/homeshick.sh
 
 # local overrides (MUST BE AT THE END)
