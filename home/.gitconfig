@@ -1,0 +1,8 @@
+[alias]
+	st = status
+	r = rebase -i origin/master
+	pr = !git fetch && git rebase origin/master
+	aa = commit --amend -a
+	a = commit --amend
+[include]
+    path = ~/.gitconfig.local
