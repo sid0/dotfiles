@@ -89,7 +89,7 @@ export PATH=$HOME/.cargo/bin:$HOME/.cabal/bin:$PATH
 [ -f ~/.homesick/repos/homeshick/homeshick.sh ] && source ~/.homesick/repos/homeshick/homeshick.sh
 
 # Cargo aliases
-alias ccc=cargo check --all-targets
+alias ccc='cargo check --all-targets'
 
 # local overrides (MUST BE AT THE END)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
