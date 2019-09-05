@@ -50,6 +50,7 @@ alias m=mosh --ssh="ssh -a"
 function precmd() {
 	print -Pn "\033]0;%~\007"
 }
+
 function preexec() {
 	print -Pn "\e]0;$1\a"
 }
@@ -86,6 +87,9 @@ bindkey '^[[B' history-substring-search-down
 
 export PATH=$HOME/.cargo/bin:$HOME/.cabal/bin:$PATH
 [ -f ~/.homesick/repos/homeshick/homeshick.sh ] && source ~/.homesick/repos/homeshick/homeshick.sh
+
+# Cargo aliases
+alias ccc=cargo check --all-targets
 
 # local overrides (MUST BE AT THE END)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
