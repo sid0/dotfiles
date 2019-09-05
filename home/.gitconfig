@@ -5,5 +5,7 @@
 	aa = commit --amend -a
 	a = commit --amend
 	rc = rebase --continue
+	ce = commit --allow-empty -m \"Empty commit\"
+	c = commit
 [include]
     path = ~/.gitconfig.local
