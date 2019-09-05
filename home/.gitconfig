@@ -4,5 +4,6 @@
 	pr = !git fetch && git rebase origin/master
 	aa = commit --amend -a
 	a = commit --amend
+	rc = rebase --continue
 [include]
     path = ~/.gitconfig.local
