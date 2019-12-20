@@ -67,6 +67,7 @@ input type:keyboard {
 }
 
 input type:touchpad {
+    click_method clickfinger
     natural_scroll enabled
 }
 
@@ -207,6 +208,17 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# Hotkeys. Note: requires:
+# sudo apt install brightnessctl
+# sudo usermod -a -G video $USER
+# sudo usermod -a -G input $USER
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
 #
 # Status Bar:
