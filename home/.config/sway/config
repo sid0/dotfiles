@@ -14,10 +14,11 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term x-terminal-emulator
+set $term wezterm
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu wofi | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -61,7 +62,11 @@ output eDP-1 scale 2
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-input "1739:52552:SYNA1D31:00_06CB:CD48_Touchpad" {
+input type:keyboard {
+    xkb_options ctrl:nocaps
+}
+
+input type:touchpad {
     natural_scroll enabled
 }
 
@@ -220,6 +225,25 @@ bar {
         background #323232
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
+}
+
+# theming and other settings
+exec_always {
+    gsettings set org.gnome.desktop.interface icon-theme 'Yaru'
+    gsettings set org.gnome.desktop.interface gtk-theme 'Yaru'
+    gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
+    gsettings set org.gnome.desktop.interface font-name 'Ubuntu 11'
+    gsettings set org.gnome.desktop.interface document-font-name 'Sans 11'
+    gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 12'
+    gsettings set org.gnome.desktop.interface cursor-size 24
+
+    gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
+    gsettings set org.gnome.nautilus.icon-view default-zoom-level 'small'
+    
+    gsettings set org.gtk.Settings.FileChooser sort-directories-first true
+    gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
+    gsettings set org.gnome.desktop.wm.preferences titlebar-uses-system-font false
+    gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu Bold 11'
 }
 
 include /etc/sway/config.d/*
