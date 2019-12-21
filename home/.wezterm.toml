@@ -1,5 +1,4 @@
 font_size = 10
-enable_ligatures = false
 
 [[font.font]]
 family = "Fira Code"
