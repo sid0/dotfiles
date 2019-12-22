@@ -1,8 +1,16 @@
-# Default config for sway
+# Rain's config for sway.
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
+
+### Prerequisites
+#
+# Requires the following commands to be run. (Commands for Ubuntu 19.10, adapt to your distro as required)
+# 
+# sudo apt install sway swaylock swayidle brightnessctl
+# sudo usermod -a -G video $USER
+# sudo usermod -a -G input $USER
 
 ### Variables
 #
@@ -19,6 +27,7 @@ set $term wezterm
 # Note: it's recommended that you pass the final command to sway
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $menu wofi | xargs swaymsg exec --
+set $alt_menu wofi --show=run | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -47,6 +56,12 @@ output eDP-1 scale 2
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+
+exec swayidle -w \
+	timeout 300 'swaylock -f' \
+	timeout 600 'swaymsg "output * dmps off"' \
+	resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f'
 
 ### Input configuration
 #
@@ -81,8 +96,12 @@ input type:touchpad {
     # Kill focused window
     bindsym $mod+Shift+q kill
 
+    # Lock screen
+    bindsym $mod+Escape exec swaylock -f
+
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+Shift+d exec $alt_menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -209,10 +228,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Hotkeys. Note: requires:
-# sudo apt install brightnessctl
-# sudo usermod -a -G video $USER
-# sudo usermod -a -G input $USER
+# Hotkeys.
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
