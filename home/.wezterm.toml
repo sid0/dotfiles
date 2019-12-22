@@ -1,5 +1,8 @@
 font_size = 10
 
+# https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets
+harfbuzz_features = ["ss01", "ss02", "ss03", "ss04", "ss06", "zero", "onum"]
+
 [[font.font]]
 family = "Fira Code"
 
