@@ -4,77 +4,27 @@
 # + shift + ctrl bindings are for control. (There are plenty of exceptions to
 # these rules.)
 
-# Quick reloading
-#ctrl + alt + shift - z : kwmc config reload
-
-# Focus other windows
-#alt + shift - j : kwmc window -f prev
-#alt + shift - k : kwmc window -f next
-
 # Expand and shrink
-alt + shift - h : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west 
-alt + shift - l : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east
-alt + shift - j : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south
-alt + shift - k : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north
+alt + shift - h : yabai -m window --resize left:-50:0
+alt + shift - l : yabai -m window --resize right:50:0
+alt + shift - j : yabai -m window --resize bottom:0:-50
+alt + shift - k : yabai -m window --resize top:0:50
 
-alt + shift + ctrl - h : chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
-alt + shift + ctrl - l : chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
-alt + shift + ctrl - j : chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
-alt + shift + ctrl - k : chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
+alt + shift + ctrl - h : yabai -m window --resize left:50:0
+alt + shift + ctrl - l : yabai -m window --resize right:-50:0
+alt + shift + ctrl - j : yabai -m window --resize bottom:0:50
+alt + shift + ctrl - k : yabai -m window --resize top:0:-50
 
 # Focus window ([ = 0x21, ] = 0x1e)
-alt + shift - 0x21 : chunkc tiling::window --focus prev
-alt + shift - 0x1E : chunkc tiling::window --focus next
+alt + shift - 0x21 : yabai -m window --focus prev
+alt + shift - 0x1E : yabai -m window --focus next
 
 # Move windows around
-alt + shift + ctrl - 0x21 : chunkc tiling::window --swap prev
-alt + shift + ctrl - 0x1E : chunkc tiling::window --swap next
+alt + shift + ctrl - 0x21 : yabai -m window --swap prev
+alt + shift + ctrl - 0x1E : yabai -m window --swap next
 
 # Toggle floating
-alt + shift - t : chunkc tiling::window --toggle float
-#alt + shift + ctrl - t : kwmc window -t next
-
-## Marking
-#alt + shift - space : kwmc window -mk focused
-#alt + shift + ctrl - space : kwmc window -s mark
-
-# Tree management (, = 0x2b, . = 0x2f)
-alt + shift + ctrl - 0x2B : kwmc tree -pseudo create
-alt + shift + ctrl - 0x2F : kwmc tree -pseudo destroy
-
-## Space management
-
-# Switch between spaces without transitions
-# (sid0: not implemented in chunkwm)
-#ctrl - left : kwmc space -fExperimental left
-#ctrl - right : kwmc space -fExperimental right
-
-# Switch quickly to first three screens
-# (sid0: not implemented in chunkwm)
-#alt + shift - w : kwmc space -fExperimental 1
-#alt + shift - e : kwmc space -fExperimental 2 
-#alt + shift - r : kwmc space -fExperimental 3
-
-# Move windows to first three screens
-# (sid0: functionality moved to totalspaces)
-#alt + shift + ctrl - w : chunkc tiling::window --send-to-desktop 1
-#alt + shift + ctrl - e : chunkc tiling::window --send-to-desktop 2
-#alt + shift + ctrl - r : chunkc tiling::window --send-to-desktop 3
+alt + shift - t : yabai -m window --toggle float
 
 # Quick restart
-alt + shift + ctrl - r : launchctl stop homebrew.mxcl.chunkwm
-
-## Scratchpad
-# (sid0: not implemented in chunkwm)
-#alt + shift - z : kwmc scratchpad add
-#alt + shift - x : kwmc scratchpad remove
-#alt + shift - 1 : kwmc scratchpad toggle 0
-#alt + shift - 2 : kwmc scratchpad toggle 1
-#alt + shift - 3 : kwmc scratchpad toggle 2
-#alt + shift - 4 : kwmc scratchpad toggle 3
-#alt + shift - 5 : kwmc scratchpad toggle 4
-#alt + shift - 6 : kwmc scratchpad toggle 5
-#alt + shift - 7 : kwmc scratchpad toggle 6
-#alt + shift - 8 : kwmc scratchpad toggle 7
-#alt + shift - 9 : kwmc scratchpad toggle 8
-#alt + shift - 0 : kwmc scratchpad toggle 9
+alt + shift + ctrl - r : launchctl stop homebrew.mxcl.yabai

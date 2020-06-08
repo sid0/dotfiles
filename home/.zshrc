@@ -85,7 +85,7 @@ _sourcebk /usr/local/share/zsh-history-substring-search/zsh-history-substring-se
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-export PATH=$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/bin:$PATH
+export PATH=$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/bin:$HOME/homebrew/bin:$PATH
 [ -f ~/.homesick/repos/homeshick/homeshick.sh ] && source ~/.homesick/repos/homeshick/homeshick.sh
 
 # Cargo aliases
