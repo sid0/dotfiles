@@ -10,3 +10,6 @@
 	redate = !env EDITOR=true git rebase -i -x 'git commit --amend --reset-author' origin/master
 [include]
     path = ~/.gitconfig.local
+
+[core]
+	excludesFile = "~/.gitignore-home"
