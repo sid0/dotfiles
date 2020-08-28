@@ -22,7 +22,6 @@
     },
     {
         "key": "ctrl+k",
-        "command": "editor.action.clipboardCutAction",
-        "when": "editorTextFocus"
+        "command": "deleteAllRight"
     }
 ]
