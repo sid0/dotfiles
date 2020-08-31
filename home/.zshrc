@@ -57,11 +57,11 @@ function preexec() {
 
 export EDITOR=vim
 
-# Hope pyenv and rbenv are installed!
+# Initialize pyenv and rbenv if available
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(rbenv init -)"
+(( $+commands[pyenv] )) && eval "$(pyenv init -)"
+(( $+commands[rbenv] )) && eval "$(rbenv init -)"
 
 function _sourcebk() {
 	# grab the backup version of the script from within the dotfiles directory
