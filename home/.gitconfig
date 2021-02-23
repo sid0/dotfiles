@@ -1,6 +1,6 @@
 [alias]
 	st = status
-	r = rebase -i origin/master
+	r = rebase -i $(__detect_git_base)
 	pr = !git fetch origin && git rebase $(__detect_git_base)
 	aa = commit --amend -a --no-edit
 	a = commit --amend
