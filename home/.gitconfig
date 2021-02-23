@@ -2,7 +2,7 @@
 	st = status
 	r = rebase -i origin/master
 	pr = !git fetch && git rebase origin/master
-	aa = commit --amend -a
+	aa = commit --amend -a --no-edit
 	a = commit --amend
 	rc = rebase --continue
 	ce = commit --allow-empty -m \"Empty commit\"
