@@ -7,7 +7,7 @@
 	rc = rebase --continue
 	ce = commit --allow-empty -m \"Empty commit\"
 	c = commit
-	redate = !env EDITOR=true git rebase -i -x 'git commit --amend --reset-author' origin/master
+	redate = !env EDITOR=true git rebase -i -x 'git commit --amend --reset-author' $(__detect_git_base)
 [include]
     path = ~/.gitconfig.local
 
